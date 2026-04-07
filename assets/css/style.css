@@ -213,9 +213,7 @@ button:focus-visible,
 
 .hero {
   position: relative;
-  height: 100vh;
-  min-height: 600px;
-  max-height: 900px;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -239,7 +237,7 @@ button:focus-visible,
   z-index: 2;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 120px 24px 80px;
   width: 100%;
 }
 
@@ -257,13 +255,13 @@ button:focus-visible,
 
 .hero h1 {
   font-family: var(--font-heading);
-  font-size: 64px;
+  font-size: 60px;
   font-weight: 400;
-  line-height: 1.05;
+  line-height: 1.08;
   color: var(--text-light);
   letter-spacing: 3px;
   text-transform: uppercase;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .hero-sub {
@@ -419,19 +417,21 @@ button:focus-visible,
   color: var(--gold);
 }
 
+/* Remove duplicate h3 — keep only bottom-positioned version */
 .dienst-card h3 {
   position: absolute;
-  bottom: 56px;
   left: 24px;
   right: 24px;
   z-index: 2;
   font-family: var(--font-heading);
-  font-size: 28px;
+  font-size: 26px;
   font-weight: 400;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   color: var(--text-light);
   line-height: 1.15;
+  bottom: auto;
+  top: 20px;
 }
 
 /* Description always visible with gradient overlay */
@@ -441,28 +441,13 @@ button:focus-visible,
   left: 24px;
   right: 24px;
   z-index: 2;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 400;
-  color: rgba(255,255,255,0.8);
-  line-height: 1.4;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.45;
   opacity: 1;
   transform: none;
   transition: color var(--transition);
-}
-
-.dienst-card h3 {
-  position: absolute;
-  bottom: 44px;
-  left: 24px;
-  right: 24px;
-  z-index: 2;
-  font-family: var(--font-heading);
-  font-size: 28px;
-  font-weight: 400;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  color: var(--text-light);
-  line-height: 1.15;
 }
 /* BMW: dark section, centered, minimal */
 
