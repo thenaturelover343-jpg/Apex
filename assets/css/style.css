@@ -80,6 +80,17 @@ a:hover {
   color: var(--black);
 }
 
+.btn-outline {
+  background: transparent;
+  color: var(--white);
+  border: 1px solid rgba(255,255,255,0.22);
+}
+
+.btn-outline:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
 /* ============ HEADER ============ */
 .site-header {
   position: fixed;
@@ -187,7 +198,9 @@ a:hover {
 /* ============ HERO ============ */
 .hero {
   padding-top: 72px;
-  background: var(--black);
+  background:
+    radial-gradient(circle at top right, rgba(184, 160, 74, 0.12), transparent 28%),
+    linear-gradient(180deg, #1a1a1a 0%, #161616 100%);
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -203,13 +216,48 @@ a:hover {
   align-items: center;
 }
 
+.eyebrow,
+.section-kicker {
+  display: inline-block;
+  margin-bottom: 14px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
 .hero-text h1 {
   font-family: var(--font-heading);
-  font-size: 52px;
-  line-height: 1.1;
-  color: var(--gold);
+  font-size: 60px;
+  line-height: 1.02;
+  color: var(--white);
   margin-bottom: 20px;
-  letter-spacing: 1.5px;
+  letter-spacing: 1px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.hero-points {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 26px;
+}
+
+.hero-points li {
+  padding: 10px 14px;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 999px;
+  font-size: 14px;
+  color: rgba(255,255,255,0.88);
+  background: rgba(255,255,255,0.03);
 }
 
 .hero-text p {
@@ -223,23 +271,51 @@ a:hover {
   margin-top: 16px;
 }
 
-.hero-images {
+.hero-visual {
+  position: relative;
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
+  gap: 22px;
+}
+
+.hero-badge-card {
+  display: inline-flex;
   align-items: center;
-  gap: 20px;
+  gap: 18px;
+  padding: 18px 22px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(184, 160, 74, 0.14);
+  backdrop-filter: blur(8px);
 }
 
 .hero-logo {
-  max-width: 280px;
-  filter: drop-shadow(0 4px 24px rgba(184, 160, 74, 0.3));
+  max-width: 82px;
+  filter: drop-shadow(0 4px 24px rgba(184, 160, 74, 0.25));
+}
+
+.hero-badge-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.hero-badge-text strong {
+  font-size: 18px;
+  color: var(--white);
+}
+
+.hero-badge-text span {
+  font-size: 14px;
+  color: rgba(255,255,255,0.7);
 }
 
 .hero-photo {
   width: 100%;
-  max-width: 420px;
-  border-radius: 6px;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+  max-width: 470px;
+  border-radius: 18px;
+  box-shadow: 0 18px 48px rgba(0,0,0,0.45);
   border: 1px solid rgba(184, 160, 74, 0.15);
 }
 
@@ -249,35 +325,51 @@ a:hover {
   padding: 80px 0;
 }
 
-.waarom h2 {
-  font-family: var(--font-heading);
-  font-size: 36px;
-  color: var(--gold);
+.section-heading {
+  max-width: 760px;
+  margin-bottom: 42px;
+}
+
+.section-heading.center {
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
-  margin-bottom: 40px;
-  letter-spacing: 1px;
 }
 
-.check-list {
-  list-style: none;
-  max-width: 640px;
-  margin: 0 auto;
+.waarom h2,
+.diensten h2,
+.cta-section h2 {
+  font-family: var(--font-heading);
+  font-size: 42px;
+  line-height: 1.05;
+  color: var(--white);
+  letter-spacing: 0.5px;
 }
 
-.check-list li {
-  font-size: 17px;
-  padding: 10px 0;
-  padding-left: 32px;
-  position: relative;
-  color: rgba(255,255,255,0.9);
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
 }
 
-.check-list li::before {
-  content: '✔';
-  position: absolute;
-  left: 0;
+.why-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(184, 160, 74, 0.12);
+  border-radius: 16px;
+  padding: 28px;
+}
+
+.why-card h3 {
+  font-family: var(--font-heading);
+  font-size: 28px;
   color: var(--gold);
-  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.why-card p {
+  color: rgba(255,255,255,0.78);
+  font-size: 15px;
+  line-height: 1.7;
 }
 
 /* ============ DIENSTEN ============ */
@@ -358,22 +450,34 @@ a:hover {
 .cta-section {
   background: var(--dark);
   padding: 80px 0;
-  text-align: center;
+}
+
+.cta-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 28px;
+  padding: 36px;
+  border-radius: 20px;
+  border: 1px solid rgba(184, 160, 74, 0.16);
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.015));
 }
 
 .cta-section h2 {
-  font-family: var(--font-heading);
-  font-size: 36px;
-  color: var(--gold);
-  margin-bottom: 16px;
-  letter-spacing: 1px;
+  margin-bottom: 12px;
 }
 
 .cta-section p {
   font-size: 17px;
   color: rgba(255,255,255,0.85);
-  max-width: 600px;
-  margin: 0 auto 28px;
+  max-width: 640px;
+}
+
+.cta-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 /* ============ FOOTER ============ */
@@ -447,23 +551,32 @@ a:hover {
 
 /* ============ RESPONSIVE ============ */
 @media (max-width: 900px) {
-  .hero-inner {
+  .hero-inner,
+  .cta-box {
     grid-template-columns: 1fr;
     text-align: center;
   }
 
-  .hero-text h1 {
-    font-size: 36px;
+  .hero-inner {
+    grid-template-columns: 1fr;
   }
 
-  .hero-images {
+  .hero-text h1 {
+    font-size: 42px;
+  }
+
+  .hero-visual {
+    align-items: center;
     order: -1;
   }
 
-  .hero-logo {
-    max-width: 200px;
+  .hero-actions,
+  .hero-points,
+  .cta-actions {
+    justify-content: center;
   }
 
+  .why-grid,
   .diensten-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -516,15 +629,25 @@ a:hover {
     padding-left: 40px;
   }
 
-  .hero-text h1 {
-    font-size: 28px;
+  .hero-text h1,
+  .waarom h2,
+  .diensten h2,
+  .cta-section h2 {
+    font-size: 32px;
   }
 
-  .diensten-grid {
-    grid-template-columns: 1fr;
+  .hero-badge-card {
+    width: 100%;
+    justify-content: center;
   }
 
+  .why-grid,
+  .diensten-grid,
   .footer-inner {
     grid-template-columns: 1fr;
+  }
+
+  .cta-box {
+    padding: 26px;
   }
 }
