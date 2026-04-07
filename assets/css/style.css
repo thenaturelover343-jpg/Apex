@@ -373,27 +373,27 @@ button:focus-visible,
 }
 
 .dienst-card {
-  position: relative;
-  overflow: hidden;
   text-decoration: none;
   color: var(--text-light);
   display: block;
-  aspect-ratio: 4/3;
   flex: 0 0 calc(33.333% - 2px);
   max-width: calc(33.333% - 2px);
+  overflow: hidden;
 }
 
 .dienst-card:hover { color: var(--text-light); }
 
 .dienst-img {
-  position: absolute;
-  inset: 0;
+  width: 100%;
+  aspect-ratio: 4/3;
+  overflow: hidden;
 }
 
 .dienst-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
   transition: transform 0.6s ease;
 }
 
@@ -401,38 +401,26 @@ button:focus-visible,
   transform: scale(1.06);
 }
 
-/* Gradient — sterk onderaan voor tekst, foto zichtbaar bovenaan */
-.dienst-card::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(0deg, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0.1) 100%);
-  transition: background var(--transition);
-}
-
-.dienst-card:hover::after {
-  background: linear-gradient(0deg, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0.15) 100%);
-}
-
-/* Tekst samen onderaan de kaart */
+/* Titelbalk onder de foto — geen tekst op de foto */
 .dienst-text {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 2;
-  padding: 20px 24px 24px;
+  background: #1a1a1a;
+  padding: 16px 20px;
+  border-top: 2px solid transparent;
+  transition: border-color var(--transition);
+}
+
+.dienst-card:hover .dienst-text {
+  border-top-color: var(--gold);
 }
 
 .dienst-card h3 {
   font-family: var(--font-heading);
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 400;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   color: var(--text-light);
   line-height: 1.15;
-  margin-bottom: 6px;
   transition: color var(--transition);
 }
 
@@ -441,10 +429,7 @@ button:focus-visible,
 }
 
 .dienst-card p {
-  font-size: 12px;
-  font-weight: 400;
-  color: rgba(255,255,255,0.72);
-  line-height: 1.5;
+  display: none;
 }
 /* BMW: dark section, centered, minimal */
 
@@ -636,6 +621,9 @@ button:focus-visible,
   .dienst-card {
     flex: 0 0 100%;
     max-width: 100%;
+  }
+
+  .dienst-img {
     aspect-ratio: 3/2;
   }
 
