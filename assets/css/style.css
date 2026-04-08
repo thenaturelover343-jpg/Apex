@@ -546,9 +546,11 @@ button:focus-visible,
 .positioning-copy p {
   font-size: 16px;
   line-height: 1.7;
-  color: var(--text-meta);
+  color: #4a4a4a;
   margin-bottom: 18px;
   max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .positioning-copy p:last-child {
@@ -722,7 +724,7 @@ button:focus-visible,
 .approach-card p {
   font-size: 15px;
   line-height: 1.6;
-  color: var(--text-meta);
+  color: #4a4a4a;
 }
 
 /* BMW: dark section, centered, minimal */
