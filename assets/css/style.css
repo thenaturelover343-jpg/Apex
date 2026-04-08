@@ -840,6 +840,18 @@ button:focus-visible,
   align-items: center;
   flex-wrap: wrap;
 }
+.cta-email {
+  margin-top: 20px;
+  font-size: 15px;
+}
+.cta-email a {
+  color: var(--gold);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(196,170,78,0.3);
+}
+.cta-email a:hover {
+  border-bottom-color: var(--gold);
+}
 
 /* ============ FOOTER ============ */
 /* BMW: dark, structured, sharp */
