@@ -779,6 +779,20 @@ button:focus-visible,
   .hero h1 { font-size: 44px; }
   .hero { max-height: 720px; }
 
+  .hero-content {
+    text-align: center;
+    margin: 0 auto;
+  }
+  .hero-logo {
+    margin: 0 auto 28px;
+  }
+  .hero-actions {
+    justify-content: center;
+  }
+  .hero-sub {
+    max-width: 100%;
+  }
+
   .why-grid {
     grid-template-columns: 1fr;
     gap: 16px;
