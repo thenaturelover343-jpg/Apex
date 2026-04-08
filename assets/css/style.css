@@ -973,8 +973,8 @@ button:focus-visible,
   }
 
   .footer-inner {
-    grid-template-columns: 1fr 1fr;
-    gap: 32px;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 24px;
   }
 }
 
@@ -1072,7 +1072,7 @@ button:focus-visible,
     font-size: 28px !important;
   }
 
-  .footer-inner { grid-template-columns: 1fr; }
+  .footer-inner { grid-template-columns: 1fr 1fr; gap: 20px; }
 
   .waarom h2,
   .diensten h2,
