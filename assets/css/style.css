@@ -810,28 +810,6 @@ button:focus-visible,
   opacity: 0.95;
 }
 
-.cta-phone {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  font-family: var(--font-heading);
-  font-size: 16px;
-  color: #ffffff;
-  background: transparent;
-  border: 2px solid #ffffff;
-  padding: 16px 48px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin-bottom: 36px;
-  transition: all var(--transition);
-}
-
-.cta-phone:hover {
-  background: #ffffff;
-  color: var(--black);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 24px rgba(0,0,0,0.18);
-}
 
 .cta-actions {
   display: flex;
