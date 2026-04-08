@@ -600,26 +600,32 @@ button:focus-visible,
 }
 
 .cta-section p {
-  font-size: 17px;
-  font-weight: 300;
-  line-height: 1.5;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.7;
   color: #ffffff;
-  max-width: 520px;
+  max-width: 600px;
   margin: 0 auto 40px;
+  opacity: 0.95;
 }
 
 .cta-phone {
-  display: block;
+  display: inline-block;
   font-family: var(--font-heading);
-  font-size: 36px;
-  color: var(--gold);
-  letter-spacing: 3px;
+  font-size: 16px;
+  color: #ffffff;
+  background: transparent;
+  border: 2px solid #ffffff;
+  padding: 16px 48px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
   margin-bottom: 36px;
-  transition: color var(--transition);
+  transition: background var(--transition), color var(--transition);
 }
 
 .cta-phone:hover {
-  color: var(--gold-hover);
+  background: #ffffff;
+  color: var(--black);
 }
 
 .cta-actions {
