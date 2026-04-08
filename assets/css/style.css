@@ -292,28 +292,31 @@ button:focus-visible,
 
 /* Nav CTA button */
 .nav-cta-item {
-  margin-left: 12px;
-  display: flex;
-  align-items: center;
+  margin-left: 20px;
+  align-self: center;
 }
 
-.nav-cta {
+.nav-cta,
+.main-nav > ul > .nav-cta-item > .nav-cta {
   display: inline-flex;
   align-items: center;
-  padding: 10px 22px;
-  background: var(--gold);
-  color: var(--black);
+  height: 38px;
+  padding: 0 22px;
+  background: transparent;
+  color: var(--gold);
   font-family: var(--font-heading);
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  border: 2px solid var(--gold);
   border-radius: 0;
   transition: background var(--transition), color var(--transition);
 }
 
-.nav-cta:hover {
-  background: var(--gold-hover);
+.nav-cta:hover,
+.main-nav > ul > .nav-cta-item > .nav-cta:hover {
+  background: var(--gold);
   color: var(--black);
 }
 
@@ -956,11 +959,18 @@ button:focus-visible,
 
   .nav-cta-item {
     margin-left: 0;
+    align-self: unset;
     padding: 8px 24px;
   }
 
-  .nav-cta {
-    display: inline-flex;
+  .nav-cta,
+  .main-nav > ul > .nav-cta-item > .nav-cta {
+    height: auto;
+    padding: 12px 0;
+    border: none;
+    color: var(--gold);
+    background: transparent;
+    display: block;
   }
 
   .hero-content {
