@@ -166,7 +166,7 @@ button:focus-visible,
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  height: 72px;
+  height: 80px;
 }
 
 .logo-link {
@@ -182,12 +182,15 @@ button:focus-visible,
 }
 
 .nav-brand {
-  font-family: var(--font-heading);
-  font-size: 26px;
-  letter-spacing: 0.18em;
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
   color: #ffffff;
   line-height: 1;
-  text-shadow: 0 0 20px rgba(196, 170, 78, 0.15);
+  padding-left: 14px;
+  border-left: 1px solid rgba(196, 170, 78, 0.4);
   transition: color var(--transition);
 }
 
@@ -371,7 +374,7 @@ button:focus-visible,
   z-index: 2;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 110px 24px 56px;
+  padding: 118px 24px 56px;
   width: 100%;
 }
 
@@ -934,7 +937,7 @@ button:focus-visible,
   .main-nav {
     display: none;
     position: absolute;
-    top: 72px;
+    top: 80px;
     left: 0; right: 0;
     background: var(--dark);
     border-top: 2px solid var(--gold);
