@@ -304,11 +304,11 @@ button:focus-visible,
   display: inline-flex;
   align-items: center;
   justify-content: flex-end;
-  height: 38px;
-  padding: 0 22px;
-  background: transparent;
-  color: var(--gold);
-  font-family: var(--font-heading);
+  height: 40px;
+  padding: 0 24px;
+  background: var(--gold);
+  color: var(--black);
+  font-family: var(--font-body);
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -316,13 +316,14 @@ button:focus-visible,
   border: 2px solid var(--gold);
   border-radius: 0;
   white-space: nowrap;
-  transition: background var(--transition), color var(--transition);
+  transition: background var(--transition), border-color var(--transition), color var(--transition);
   justify-self: end;
 }
 
 .nav-cta:hover {
-  background: var(--gold);
-  color: var(--black);
+  background: transparent;
+  border-color: var(--gold);
+  color: var(--gold);
 }
 
 /* Mobile menu button */
