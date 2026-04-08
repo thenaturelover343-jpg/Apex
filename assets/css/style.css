@@ -648,7 +648,7 @@ button:focus-visible,
   line-height: 1.8;
 }
 
-.footer-col h4 {
+.footer-col .footer-title {
   font-family: var(--font-body);
   font-size: 12px;
   font-weight: 700;
