@@ -303,19 +303,20 @@ button:focus-visible,
 .nav-cta {
   display: inline-flex;
   align-items: center;
-  justify-content: flex-end;
-  height: 40px;
-  padding: 0 24px;
+  justify-content: center;
+  height: 44px;
+  padding: 0 28px;
   background: var(--gold);
   color: var(--black);
   font-family: var(--font-body);
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   border: 2px solid var(--gold);
   border-radius: 0;
   white-space: nowrap;
+  margin-left: auto;
   transition: background var(--transition), border-color var(--transition), color var(--transition);
   justify-self: end;
 }
