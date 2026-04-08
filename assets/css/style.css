@@ -765,11 +765,29 @@ button:focus-visible,
     aspect-ratio: 3/2;
   }
 
+  .approach-grid,
+  .approach-grid.compact-cards {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 0 !important;
+  }
+
+  .approach-card,
+  .approach-grid.compact-cards .approach-card {
+    width: 100% !important;
+    display: block !important;
+    border-right: none !important;
+    border-bottom: 1px solid #e0e0e0 !important;
+    padding: 24px 0 !important;
+  }
+
   .footer-inner { grid-template-columns: 1fr; }
 
   .waarom h2,
   .diensten h2,
-  .cta-section h2 {
+  .cta-section h2,
+  .approach-header h2,
+  .positioning-intro h2 {
     font-size: 32px;
   }
 }
