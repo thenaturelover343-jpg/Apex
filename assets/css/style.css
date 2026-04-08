@@ -354,16 +354,28 @@ button:focus-visible,
 
 .positioning-grid {
   display: grid;
-  grid-template-columns: 0.95fr 1.05fr;
-  gap: 48px;
+  grid-template-columns: 1fr;
+  gap: 32px;
   align-items: start;
   border-top: 1px solid #e0e0e0;
   padding-top: 28px;
 }
 
+@media (min-width: 768px) {
+  .positioning-grid {
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: 48px;
+  }
+}
+
 .positioning-grid.compact {
-  grid-template-columns: 1fr 1.1fr;
   gap: 36px;
+}
+
+@media (max-width: 767px) {
+  .positioning-grid.compact {
+    gap: 24px;
+  }
 }
 
 .section-kicker {
