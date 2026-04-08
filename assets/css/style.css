@@ -304,27 +304,30 @@ button:focus-visible,
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 44px;
-  padding: 0 28px;
+  gap: 8px;
+  padding: 10px 28px;
   background: var(--gold);
   color: var(--black);
-  font-family: var(--font-body);
-  font-size: 14px;
+  font-family: var(--font-heading);
+  font-size: 16px;
   font-weight: 700;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   border: 2px solid var(--gold);
   border-radius: 0;
   white-space: nowrap;
   margin-left: auto;
-  transition: background var(--transition), border-color var(--transition), color var(--transition);
   justify-self: end;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  transition: background var(--transition), border-color var(--transition), color var(--transition), transform var(--transition), box-shadow var(--transition);
 }
 
 .nav-cta:hover {
-  background: transparent;
-  border-color: var(--gold);
-  color: var(--gold);
+  background: var(--gold-hover);
+  border-color: var(--gold-hover);
+  color: var(--black);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.18);
 }
 
 /* Mobile menu button */
