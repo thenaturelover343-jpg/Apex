@@ -746,10 +746,9 @@ button:focus-visible,
 
 /* Recruitment */
 .recruitment-section {
-  background: var(--dark);
-  padding: 40px 0;
+  background: var(--black);
+  padding: 48px 0;
   text-align: center;
-  border-top: 1px solid rgba(196,170,78,0.25);
 }
 .recruitment-label {
   font-family: var(--font-heading);
@@ -828,7 +827,7 @@ button:focus-visible,
 /* BMW: dark, structured, sharp */
 
 .site-footer {
-  background: var(--dark);
+  background: var(--black);
   border-top: 2px solid var(--gold);
   padding: 72px 0 0;
 }
