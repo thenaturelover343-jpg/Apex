@@ -169,9 +169,29 @@ button:focus-visible,
   height: 72px;
 }
 
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
 .header-logo {
-  height: 48px;
+  height: 40px;
   width: auto;
+}
+
+.nav-brand {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  letter-spacing: 0.12em;
+  color: var(--text-light);
+  line-height: 1;
+  transition: color var(--transition);
+}
+
+.logo-link:hover .nav-brand {
+  color: var(--gold);
 }
 
 .main-nav ul {
@@ -253,6 +273,53 @@ button:focus-visible,
 .sub-menu li a:hover {
   color: var(--gold);
   background: rgba(196, 170, 78, 0.06);
+}
+
+/* Dropdown chevron */
+.nav-chevron {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 4px;
+  transition: transform 0.2s ease;
+  opacity: 0.7;
+}
+
+.has-sub:hover .nav-chevron,
+.has-sub:focus-within .nav-chevron {
+  transform: rotate(180deg);
+  opacity: 1;
+}
+
+/* Nav CTA button */
+.nav-cta-item {
+  margin-left: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-cta {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 22px;
+  background: var(--gold);
+  color: var(--black);
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: 0;
+  transition: background var(--transition), color var(--transition);
+}
+
+.nav-cta:hover {
+  background: var(--gold-hover);
+  color: var(--black);
+}
+
+/* Geen underline-animatie op CTA */
+.nav-cta-item .nav-cta::after {
+  display: none;
 }
 
 /* Mobile menu button */
@@ -886,6 +953,15 @@ button:focus-visible,
   }
 
   .sub-menu li a { padding-left: 40px; }
+
+  .nav-cta-item {
+    margin-left: 0;
+    padding: 8px 24px;
+  }
+
+  .nav-cta {
+    display: inline-flex;
+  }
 
   .hero-content {
     text-align: center;
