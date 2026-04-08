@@ -32,8 +32,8 @@ html { scroll-behavior: smooth; }
 
 body {
   font-family: var(--font-body);
-  font-size: 16px;
-  line-height: 1.15;
+  font-size: 17px;
+  line-height: 1.65;
   color: var(--text-dark);
   background: var(--surface);
   -webkit-font-smoothing: antialiased;
@@ -57,9 +57,9 @@ button:focus-visible,
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 32px;
 }
 
 /* ============ BUTTONS ============ */
@@ -67,11 +67,11 @@ button:focus-visible,
 
 .btn {
   display: inline-block;
-  padding: 16px 40px;
+  padding: 18px 48px;
   font-family: var(--font-body);
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 700;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   border-radius: 0;
   transition: all var(--transition);
@@ -286,19 +286,19 @@ button:focus-visible,
 
 .waarom {
   background: var(--surface);
-  padding: 100px 0;
+  padding: 120px 0;
 }
 
 .waarom h2 {
   font-family: var(--font-heading);
-  font-size: 42px;
+  font-size: 48px;
   font-weight: 400;
-  line-height: 1.15;
+  line-height: 1.1;
   color: var(--text-dark);
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   text-transform: uppercase;
   text-align: center;
-  margin-bottom: 64px;
+  margin-bottom: 72px;
 }
 
 .why-grid {
@@ -309,7 +309,7 @@ button:focus-visible,
 }
 
 .why-card {
-  padding: 40px 32px;
+  padding: 48px 36px;
   border-right: 1px solid #e0e0e0;
   border-bottom: 1px solid #e0e0e0;
 }
@@ -350,7 +350,7 @@ button:focus-visible,
 
 .positioning-section {
   background: var(--surface);
-  padding: 96px 0 40px;
+  padding: 120px 0 60px;
 }
 
 .positioning-grid {
@@ -393,10 +393,10 @@ button:focus-visible,
 .positioning-intro h2,
 .approach-header h2 {
   font-family: var(--font-heading);
-  font-size: 42px;
+  font-size: 48px;
   font-weight: 400;
   line-height: 1.08;
-  letter-spacing: 1.5px;
+  letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--text-dark);
 }
@@ -418,19 +418,19 @@ button:focus-visible,
 
 .diensten {
   background: var(--dark);
-  padding: 100px 0;
+  padding: 120px 0;
 }
 
 .diensten h2 {
   font-family: var(--font-heading);
-  font-size: 42px;
+  font-size: 48px;
   font-weight: 400;
-  line-height: 1.15;
+  line-height: 1.1;
   color: var(--text-light);
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   text-transform: uppercase;
   text-align: center;
-  margin-bottom: 64px;
+  margin-bottom: 72px;
 }
 
 .diensten-grid {
@@ -472,7 +472,7 @@ button:focus-visible,
 /* Titelbalk onder de foto — geen tekst op de foto */
 .dienst-text {
   background: #1a1a1a;
-  padding: 16px 20px;
+  padding: 20px 24px;
   border-top: 2px solid transparent;
   transition: border-color var(--transition);
 }
@@ -508,7 +508,7 @@ button:focus-visible,
 
 .approach-section {
   background: var(--surface);
-  padding: 40px 0 100px;
+  padding: 50px 0 120px;
 }
 
 .approach-header {
@@ -528,7 +528,7 @@ button:focus-visible,
 }
 
 .approach-card {
-  padding: 36px 28px;
+  padding: 44px 32px;
   border-right: 1px solid #e0e0e0;
   border-bottom: 1px solid #e0e0e0;
 }
