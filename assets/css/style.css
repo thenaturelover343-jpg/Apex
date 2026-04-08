@@ -361,6 +361,11 @@ button:focus-visible,
   padding-top: 28px;
 }
 
+.positioning-grid.compact {
+  grid-template-columns: 1fr 1.1fr;
+  gap: 36px;
+}
+
 .section-kicker {
   display: inline-block;
   font-family: var(--font-body);
@@ -498,6 +503,10 @@ button:focus-visible,
   margin-bottom: 48px;
 }
 
+.approach-header.compact {
+  margin-bottom: 32px;
+}
+
 .approach-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -509,6 +518,10 @@ button:focus-visible,
   padding: 36px 28px;
   border-right: 1px solid #e0e0e0;
   border-bottom: 1px solid #e0e0e0;
+}
+
+.approach-grid.compact-cards .approach-card {
+  padding: 28px 24px;
 }
 
 .approach-card:last-child {
