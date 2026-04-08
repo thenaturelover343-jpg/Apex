@@ -817,3 +817,69 @@ button:focus-visible,
     font-size: 32px;
   }
 }
+
+/* ============================================
+   CSS Animations & Transitions
+   ============================================ */
+
+/* Fade-in on scroll */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hover lift on service cards */
+.dienst-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dienst-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+}
+
+/* Hover on approach cards */
+.approach-card {
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.approach-card:hover {
+  background: rgba(196, 170, 78, 0.05);
+  transform: translateY(-3px);
+}
+
+/* Smooth all links & buttons */
+a, button, .cta-button, .nav-link {
+  transition: color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+}
+
+/* Gold underline grow on nav hover */
+.nav-link::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: var(--gold);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}

@@ -154,7 +154,7 @@
   </section>
 
   <!-- POSITIONING -->
-  <section class="positioning-section">
+  <section class="positioning-section fade-in">
     <div class="container">
       <div class="positioning-grid compact">
         <div class="positioning-intro">
@@ -171,7 +171,7 @@
   </section>
 
   <!-- DIENSTEN -->
-  <section class="diensten">
+  <section class="diensten fade-in">
     <div class="container">
       <h2>ONZE BEWAKINGSDIENSTEN</h2>
       <div class="diensten-grid">
@@ -231,7 +231,7 @@
   </section>
 
   <!-- WERKWIJZE -->
-  <section class="approach-section">
+  <section class="approach-section fade-in">
     <div class="container">
       <div class="approach-header compact">
         <span class="section-kicker">Werkwijze</span>
@@ -310,5 +310,20 @@
   </footer>
 
   <script src="assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+      document.querySelectorAll('.fade-in').forEach(function(el) {
+        observer.observe(el);
+      });
+    });
+  </script>
 </body>
 </html>
