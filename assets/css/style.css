@@ -896,6 +896,19 @@ button:focus-visible,
   padding-left: 4px;
 }
 
+/* Trust bar */
+.footer-trust {
+  border-top: 1px solid rgba(196,170,78,0.25);
+  padding: 16px 0;
+  text-align: center;
+}
+.footer-trust p {
+  font-size: 13px;
+  color: #999;
+  letter-spacing: 0.03em;
+  margin: 0;
+}
+
 .footer-bottom {
   text-align: center;
   padding: 28px;
