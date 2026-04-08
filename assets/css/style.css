@@ -737,6 +737,39 @@ button:focus-visible,
 
 /* BMW: dark section, centered, minimal */
 
+/* Recruitment */
+.recruitment-section {
+  background: var(--dark);
+  padding: 80px 0;
+  text-align: center;
+  border-top: 3px solid var(--gold);
+  border-bottom: 3px solid var(--gold);
+}
+.recruitment-section h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 42px;
+  color: var(--gold);
+  letter-spacing: 0.08em;
+  margin-bottom: 24px;
+}
+.recruitment-section p {
+  color: #ccc;
+  max-width: 720px;
+  margin: 0 auto 18px;
+  font-size: 17px;
+  line-height: 1.65;
+}
+.recruitment-section .btn {
+  margin-top: 16px;
+  background: var(--gold);
+  color: var(--black);
+  border: 2px solid var(--gold);
+}
+.recruitment-section .btn:hover {
+  background: transparent;
+  color: var(--gold);
+}
+
 .cta-section {
   background: var(--black);
   padding: 120px 0;
