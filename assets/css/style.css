@@ -781,6 +781,20 @@ button:focus-visible,
     padding: 24px 0 !important;
   }
 
+  .positioning-grid,
+  .positioning-grid.compact {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+
+  .positioning-section {
+    padding: 60px 0 40px;
+  }
+
+  .positioning-intro h2 {
+    font-size: 28px !important;
+  }
+
   .footer-inner { grid-template-columns: 1fr; }
 
   .waarom h2,
