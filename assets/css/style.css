@@ -588,15 +588,17 @@ button:focus-visible,
 }
 
 .diensten-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
   gap: 24px;
+  justify-content: center;
 }
 
 .dienst-card {
   text-decoration: none;
   color: var(--text-light);
   display: block;
+  width: calc(33.333% - 16px);
   overflow: hidden;
   background: var(--black);
   box-shadow: 0 4px 20px rgba(0,0,0,0.3);
@@ -959,8 +961,10 @@ button:focus-visible,
   }
 
   .diensten-grid {
-    grid-template-columns: repeat(2, 1fr);
     gap: 16px;
+  }
+  .diensten-grid .dienst-card {
+    width: calc(50% - 12px);
   }
 
   .why-card,
@@ -1032,8 +1036,11 @@ button:focus-visible,
   .hero-logo { width: 80px; }
 
   .diensten-grid {
-    grid-template-columns: 1fr;
     gap: 16px;
+  }
+  .diensten-grid .dienst-card {
+    width: 100%;
+  }
   }
 
   .dienst-img {
