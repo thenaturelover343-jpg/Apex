@@ -663,6 +663,88 @@ button:focus-visible,
   line-height: 1.55;
   margin-top: 8px;
 }
+/* ============ SERVICE DETAIL BLOCKS ============ */
+
+.service-detail-block {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 48px;
+  align-items: center;
+  padding: 56px 0;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.service-detail-block:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.service-detail-block.reverse {
+  grid-template-columns: 0.85fr 1.15fr;
+}
+
+.service-detail-block.reverse .service-detail-text {
+  order: 2;
+}
+
+.service-detail-block.reverse .service-detail-image {
+  order: 1;
+}
+
+.service-detail-text {
+  color: var(--text-light);
+}
+
+.service-detail-text h2 {
+  text-align: left;
+  margin-bottom: 18px;
+}
+
+.service-detail-text h3 {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 24px 0 12px;
+}
+
+.service-detail-text p {
+  font-size: 16px;
+  line-height: 1.75;
+  color: rgba(255,255,255,0.86);
+  margin-bottom: 16px;
+}
+
+.service-detail-text ul {
+  list-style: none;
+  margin: 0 0 18px;
+  padding: 0;
+}
+
+.service-detail-text li {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 8px;
+  color: rgba(255,255,255,0.9);
+  line-height: 1.65;
+}
+
+.service-detail-text li::before {
+  content: '–';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+}
+
+.service-detail-image img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
 /* ============ APPROACH ============ */
 /* BMW-inspired: numbered process cards with sharp grid */
 
@@ -967,6 +1049,17 @@ button:focus-visible,
     width: calc(50% - 12px);
   }
 
+  .service-detail-block,
+  .service-detail-block.reverse {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .service-detail-block.reverse .service-detail-text,
+  .service-detail-block.reverse .service-detail-image {
+    order: initial;
+  }
+
   .why-card,
   .approach-card {
     border-left: 3px solid var(--gold);
@@ -1071,6 +1164,20 @@ button:focus-visible,
   }
   .diensten-grid .dienst-card {
     width: 100%;
+  }
+
+  .service-detail-block {
+    padding: 36px 0;
+    gap: 20px;
+  }
+
+  .service-detail-text h2 {
+    font-size: 32px;
+  }
+
+  .service-detail-text p,
+  .service-detail-text li {
+    font-size: 15px;
   }
 
   .dienst-img {
