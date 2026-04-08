@@ -753,7 +753,7 @@ button:focus-visible,
 .recruitment-label {
   font-family: var(--font-heading);
   font-size: 22px;
-  color: var(--gold);
+  color: var(--text-light);
   letter-spacing: 0.06em;
   text-transform: uppercase;
   margin-bottom: 8px;
