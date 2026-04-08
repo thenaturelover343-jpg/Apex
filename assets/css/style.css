@@ -982,6 +982,7 @@ button:focus-visible,
   .header-inner {
     display: flex;
     justify-content: space-between;
+    position: relative;
   }
 
   .mobile-menu-btn { display: flex; }
@@ -990,7 +991,10 @@ button:focus-visible,
     display: none;
     position: absolute;
     top: 80px;
-    left: 0; right: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1200;
     background: var(--dark);
     border-top: 2px solid var(--gold);
   }
