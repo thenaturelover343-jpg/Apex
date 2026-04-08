@@ -1137,12 +1137,20 @@ button:focus-visible,
     border-top: none;
     background: #151515;
     transition: max-height 300ms ease, opacity 200ms ease, visibility 200ms ease;
+    display: block;
   }
 
   .has-sub.sub-open > .sub-menu {
-    opacity: 1;
-    visibility: visible;
+    opacity: 1 !important;
+    visibility: visible !important;
     max-height: 600px;
+  }
+
+  .has-sub:hover > .sub-menu,
+  .has-sub:focus-within > .sub-menu {
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
   }
 
   .has-sub.sub-open > a .nav-chevron {
