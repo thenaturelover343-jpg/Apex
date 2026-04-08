@@ -950,8 +950,8 @@ button:focus-visible,
 
   .approach-grid,
   .approach-grid.compact-cards {
-    grid-template-columns: 1fr;
-    gap: 16px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
   }
 
   .approach-card,
