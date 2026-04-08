@@ -433,6 +433,15 @@ button:focus-visible,
   margin-bottom: 72px;
 }
 
+.diensten-intro {
+  color: #ffffff;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto 72px;
+  text-align: center;
+}
+
 .diensten-grid {
   display: flex;
   flex-wrap: wrap;
