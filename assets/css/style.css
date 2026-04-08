@@ -344,6 +344,57 @@ button:focus-visible,
   color: var(--text-meta);
 }
 
+/* ============ POSITIONING ============ */
+/* BMW-inspired: structured editorial block on white surface */
+
+.positioning-section {
+  background: var(--surface);
+  padding: 96px 0 40px;
+}
+
+.positioning-grid {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 48px;
+  align-items: start;
+  border-top: 1px solid #e0e0e0;
+  padding-top: 28px;
+}
+
+.section-kicker {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 14px;
+}
+
+.positioning-intro h2,
+.approach-header h2 {
+  font-family: var(--font-heading);
+  font-size: 42px;
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-dark);
+}
+
+.positioning-copy p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text-meta);
+  margin-bottom: 18px;
+  max-width: 700px;
+}
+
+.positioning-copy p:last-child {
+  margin-bottom: 0;
+}
+
 /* ============ DIENSTEN ============ */
 /* BMW: dark section, full-bleed image cards, sharp corners */
 
@@ -434,6 +485,62 @@ button:focus-visible,
   line-height: 1.45;
   margin-top: 6px;
 }
+/* ============ APPROACH ============ */
+/* BMW-inspired: numbered process cards with sharp grid */
+
+.approach-section {
+  background: var(--surface);
+  padding: 40px 0 100px;
+}
+
+.approach-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.approach-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border-top: 1px solid #e0e0e0;
+}
+
+.approach-card {
+  padding: 36px 28px;
+  border-right: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.approach-card:last-child {
+  border-right: none;
+}
+
+.approach-step {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 34px;
+  line-height: 1;
+  color: var(--gold);
+  margin-bottom: 16px;
+}
+
+.approach-card h3 {
+  font-family: var(--font-body);
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.3;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-dark);
+  margin-bottom: 12px;
+}
+
+.approach-card p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-meta);
+}
+
 /* BMW: dark section, centered, minimal */
 
 .cta-section {
