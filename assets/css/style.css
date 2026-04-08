@@ -909,6 +909,14 @@ button:focus-visible,
   margin: 0;
 }
 
+.footer-company {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 20px;
+  color: var(--gold);
+  letter-spacing: 0.06em;
+  margin-bottom: 8px;
+}
+
 .footer-bottom {
   text-align: center;
   padding: 28px;
