@@ -160,12 +160,12 @@ button:focus-visible,
 }
 
 .header-inner {
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 0 24px;
-  display: flex;
+  padding: 0 32px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  justify-content: space-between;
   height: 72px;
 }
 
@@ -192,6 +192,11 @@ button:focus-visible,
 
 .logo-link:hover .nav-brand {
   color: var(--gold);
+}
+
+.main-nav {
+  display: flex;
+  justify-content: center;
 }
 
 .main-nav ul {
@@ -291,15 +296,10 @@ button:focus-visible,
 }
 
 /* Nav CTA button */
-.nav-cta-item {
-  margin-left: 20px;
-  align-self: center;
-}
-
-.nav-cta,
-.main-nav > ul > .nav-cta-item > .nav-cta {
+.nav-cta {
   display: inline-flex;
   align-items: center;
+  justify-content: flex-end;
   height: 38px;
   padding: 0 22px;
   background: transparent;
@@ -311,18 +311,14 @@ button:focus-visible,
   text-transform: uppercase;
   border: 2px solid var(--gold);
   border-radius: 0;
+  white-space: nowrap;
   transition: background var(--transition), color var(--transition);
+  justify-self: end;
 }
 
-.nav-cta:hover,
-.main-nav > ul > .nav-cta-item > .nav-cta:hover {
+.nav-cta:hover {
   background: var(--gold);
   color: var(--black);
-}
-
-/* Geen underline-animatie op CTA */
-.nav-cta-item .nav-cta::after {
-  display: none;
 }
 
 /* Mobile menu button */
@@ -927,6 +923,11 @@ button:focus-visible,
 }
 
 @media (max-width: 600px) {
+  .header-inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
   .mobile-menu-btn { display: flex; }
 
   .main-nav {
@@ -957,20 +958,8 @@ button:focus-visible,
 
   .sub-menu li a { padding-left: 40px; }
 
-  .nav-cta-item {
-    margin-left: 0;
-    align-self: unset;
-    padding: 8px 24px;
-  }
-
-  .nav-cta,
-  .main-nav > ul > .nav-cta-item > .nav-cta {
-    height: auto;
-    padding: 12px 0;
-    border: none;
-    color: var(--gold);
-    background: transparent;
-    display: block;
+  .nav-cta {
+    display: none;
   }
 
   .hero-content {
