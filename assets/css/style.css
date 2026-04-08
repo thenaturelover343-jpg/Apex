@@ -697,12 +697,14 @@ button:focus-visible,
 
   .approach-grid,
   .approach-grid.compact-cards {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     border-top: none;
   }
 
   .approach-card,
   .approach-grid.compact-cards .approach-card {
+    width: 100%;
     border-right: none;
     border-bottom: 1px solid #e0e0e0;
     padding: 28px 0;
