@@ -21,6 +21,22 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
+  // Mobile sub-menu toggle
+  var subToggles = document.querySelectorAll('.has-sub > a');
+  subToggles.forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      if (window.innerWidth <= 900) {
+        e.preventDefault();
+        var parent = link.parentElement;
+        // Close other open sub-menus
+        document.querySelectorAll('.has-sub.sub-open').forEach(function(el) {
+          if (el !== parent) el.classList.remove('sub-open');
+        });
+        parent.classList.toggle('sub-open');
+      }
+    });
+  });
+
   // Fade-in scroll animation
   var observer = new IntersectionObserver(function(entries) {
     entries.forEach(function(entry) {

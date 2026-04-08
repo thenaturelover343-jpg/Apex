@@ -1128,12 +1128,25 @@ button:focus-visible,
 
   .sub-menu {
     position: static;
-    opacity: 1;
-    visibility: visible;
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+    overflow: hidden;
     transform: none;
     min-width: 0;
     border-top: none;
     background: #151515;
+    transition: max-height 300ms ease, opacity 200ms ease, visibility 200ms ease;
+  }
+
+  .has-sub.sub-open > .sub-menu {
+    opacity: 1;
+    visibility: visible;
+    max-height: 600px;
+  }
+
+  .has-sub.sub-open > a .nav-chevron {
+    transform: rotate(180deg);
   }
 
   .sub-menu li a { padding-left: 40px; }
