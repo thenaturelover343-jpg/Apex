@@ -287,6 +287,7 @@ button:focus-visible,
 .waarom {
   background: var(--surface);
   padding: 120px 0;
+  color: var(--text-dark);
 }
 
 .waarom h2 {
@@ -351,6 +352,7 @@ button:focus-visible,
 .positioning-section {
   background: var(--surface);
   padding: 120px 0 60px;
+  color: var(--text-dark);
 }
 
 .positioning-grid {
@@ -518,6 +520,7 @@ button:focus-visible,
 .approach-section {
   background: var(--surface);
   padding: 50px 0 120px;
+  color: var(--text-dark);
 }
 
 .approach-header {
