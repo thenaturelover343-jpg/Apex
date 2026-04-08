@@ -10,6 +10,15 @@ document.addEventListener('DOMContentLoaded', function() {
       btn.setAttribute('aria-expanded', expanded);
       btn.setAttribute('aria-label', expanded ? 'Menu sluiten' : 'Menu openen');
     });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && nav.classList.contains('open')) {
+        nav.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+        btn.setAttribute('aria-label', 'Menu openen');
+        btn.focus();
+      }
+    });
   }
 
   // Fade-in scroll animation

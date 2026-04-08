@@ -30,6 +30,27 @@
 
 html { scroll-behavior: smooth; }
 
+/* Skip-to-content link */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  background: var(--gold);
+  color: var(--black);
+  padding: 12px 24px;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  z-index: 9999;
+  transition: top 0.2s ease;
+}
+.skip-link:focus {
+  top: 0;
+  outline: 2px solid var(--black);
+  outline-offset: 2px;
+}
+
 body {
   font-family: var(--font-body);
   font-size: 17px;
@@ -77,7 +98,7 @@ button:focus-visible,
   letter-spacing: 0.08em;
   text-transform: uppercase;
   border-radius: 0;
-  transition: all var(--transition);
+  transition: background var(--transition), border-color var(--transition), color var(--transition), transform var(--transition), box-shadow var(--transition);
   cursor: pointer;
   border: 2px solid transparent;
   box-shadow: 0 2px 12px rgba(0,0,0,0.10);
@@ -212,7 +233,8 @@ button:focus-visible,
   z-index: 100;
 }
 
-.has-sub:hover .sub-menu {
+.has-sub:hover .sub-menu,
+.has-sub:focus-within .sub-menu {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
@@ -261,7 +283,7 @@ button:focus-visible,
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url('../../assets/img/hero.jpg') 30% center / cover no-repeat;
+  background: url('../img/hero.jpg') 30% center / cover no-repeat;
   background-color: var(--dark);
 }
 
@@ -514,9 +536,14 @@ button:focus-visible,
   overflow: hidden;
   background: var(--black);
   box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.dienst-card:hover { color: var(--text-light); }
+.dienst-card:hover {
+  color: var(--text-light);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.25);
+}
 
 .dienst-img {
   width: 100%;
@@ -818,12 +845,6 @@ button:focus-visible,
     gap: 16px;
   }
 
-  .why-grid,
-  .approach-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-
   .why-card,
   .approach-card {
     border-left: 3px solid var(--gold);
@@ -957,33 +978,7 @@ button:focus-visible,
   transform: translateY(0);
 }
 
-/* Hover lift on service cards */
-.dienst-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.dienst-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
-}
-
-/* Hover on approach cards — handled above in main .approach-card block */
-
 /* Smooth all links & buttons */
-a, button, .cta-button, .nav-link {
+a, button, .cta-button {
   transition: color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
-}
-
-/* Gold underline grow on nav hover */
-.nav-link::after {
-  content: '';
-  display: block;
-  width: 0;
-  height: 2px;
-  background: var(--gold);
-  transition: width 0.3s ease;
-}
-
-.nav-link:hover::after {
-  width: 100%;
 }
